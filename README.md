@@ -56,7 +56,7 @@ npx @dhahaby-com/aurelia-cli appointments    # also: card, loan, vault, sale DHY
 
 ## Safety
 
-- **Read-only.** Through MCP, Aurelia cannot apply, sign, pay, book or move gold. Those steps happen only in the Dhahaby app, and the agent hands over a link.
+- **Read-only.** Through MCP, Aurelia cannot apply, sign, pay, book or move gold. Those steps happen only in the Aurelia app (aurelia.dhahaby.com), and the agent hands over a link.
 - **Your own sign-in.** You sign in on Dhahaby's page with phone, email or Google. Agents never see your password or codes. Access tokens last 15 minutes, are bound to the MCP server and can be revoked at any time.
 - **Indicative figures.** Values are indicative. Final amounts are set by a licensed lender after a certified appraisal. Aurelia does not give financial advice.
 
