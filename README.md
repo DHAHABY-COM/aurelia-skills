@@ -7,7 +7,7 @@ Aurelia is Dhahaby's gold assistant for the UAE. This repo connects any AI agent
 - today's gold price in AED;
 - what you could borrow against your gold, with a gold-backed loan or a gold-backed card;
 - partner jewellers for a certified appraisal;
-- after you sign in, your own Dhahaby gold pieces, applications and appraisals (read-only).
+- after you sign in, your own Dhahaby account (read-only): gold pieces, appraisal appointments, loan and repayment schedule, gold card, sales, vault bookings, identity status, documents and activity.
 
 ## Install
 
@@ -33,6 +33,8 @@ Public tools without sign-in are at `https://mcp.dhahaby.com/public`.
 ```
 npx @dhahaby-com/aurelia-cli price
 npx @dhahaby-com/aurelia-cli estimate --karat 21 --grams 40
+npx @dhahaby-com/aurelia-cli login
+npx @dhahaby-com/aurelia-cli appointments    # also: card, loan, vault, sale DHY-S-…, identity, activity, documents
 ```
 
 ## Skills
@@ -44,7 +46,13 @@ npx @dhahaby-com/aurelia-cli estimate --karat 21 --grams 40
 | `aurelia-borrow` | What you could borrow; loan vs card | no (per-piece limits with sign-in) |
 | `aurelia-jewellers` | Partner jewellers; your appraisal bookings | bookings only |
 | `aurelia-my-gold` | Your pieces, their status and next step | yes |
-| `aurelia-status` | Loan and card applications, facilities, KYC, notifications | yes |
+| `aurelia-status` | Where everything stands: applications, facilities, next steps | yes |
+| `aurelia-appointments` | Your appraisal appointments, pieces and results | yes |
+| `aurelia-loan` | Loan eligibility, exact quote, application, schedule and next payment | yes |
+| `aurelia-card` | Card eligibility, application, limit, available amount, pledged pieces | yes |
+| `aurelia-sell` | What you could sell, a sale offer, the receipt | yes |
+| `aurelia-vault` | Vault fee quote, your bookings and drop-off deadlines | yes |
+| `aurelia-account` | Identity verification, documents, activity, notifications | yes |
 
 ## Safety
 

@@ -4,7 +4,7 @@ description: "Status of a signed-in user's Dhahaby loan and card applications, a
 license: MIT
 metadata:
   category: "account"
-  version: "0.1.0"
+  version: "0.2.0"
   docs: "https://docs.dhahaby.com/tools#loan_application_get"
 ---
 # Applications and account status
@@ -17,8 +17,9 @@ metadata:
    - "anything new?": `notifications_list` and `activity_list`;
    - documents: `documents_list` (names and dates only, never contents).
 2. Report the status and the next step exactly as returned, with the reference (DHY-L-… / DHY-C-…).
-3. If the next step is an action (sign, pay, hand over gold, upload a document), give the app link with `handoff_to_app`.
-4. An empty result ("No loan application yet.") is a valid answer; say so plainly.
+3. For the details of one journey use its skill: `aurelia-appointments`, `aurelia-loan` (schedule, next payment), `aurelia-card` (limit, available, pieces), `aurelia-sell` (offer, receipt), `aurelia-vault` (bookings, drop-off), `aurelia-account` (identity, documents, activity).
+4. If the next step is an action (sign, pay, hand over gold, verify identity), give the app link with `handoff_to_app`.
+5. An empty result ("No loan application yet.") is a valid answer; say so plainly.
 
 ## Do not
 - Promise approval, timelines or amounts that the tools did not return.

@@ -4,8 +4,8 @@
     "borrowing_estimate",
     "products_compare",
     "jewellers_list",
-    "appraisal_slots_list",
-    "handoff_to_app"
+    "handoff_to_app",
+    "appraisal_slots_list"
   ],
   "signedIn": [
     "account_context_get",
@@ -15,13 +15,22 @@
     "card_eligibility_get",
     "loan_application_get",
     "card_application_get",
-    "loan_facilities_list",
-    "card_facility_get",
     "appraisal_bookings_list",
+    "appointment_get",
+    "card_facility_get",
+    "loan_facilities_list",
+    "sale_completion_get",
     "kyc_status_get",
-    "notifications_list",
     "activity_list",
-    "documents_list"
+    "notifications_list",
+    "documents_list",
+    "loan_quote",
+    "loan_offer_get",
+    "card_offer_get",
+    "sell_eligibility_get",
+    "sell_offer_get",
+    "custody_quote",
+    "custody_bookings_list"
   ],
   "params": [
     "weight_g",
