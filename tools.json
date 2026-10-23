@@ -24,6 +24,7 @@
     "activity_list",
     "notifications_list",
     "documents_list",
+    "bank_details_status_get",
     "loan_quote",
     "loan_offer_get",
     "card_offer_get",

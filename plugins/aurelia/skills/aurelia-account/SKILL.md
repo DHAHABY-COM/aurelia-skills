@@ -1,19 +1,20 @@
 ---
 name: aurelia-account
-description: "The signed-in user's Dhahaby account: identity verification (UAE PASS) status, documents, recent activity and notifications. Use when the user asks \"am I verified?\"; \"where is my loan agreement?\"; \"what happened on my account this week?\"; \"any new notifications?\". Needs the Aurelia MCP server and sign-in."
+description: "The signed-in user's Dhahaby account: identity verification (UAE PASS) status, bank details on file, documents, recent activity and notifications. Use when the user asks \"am I verified?\"; \"are my bank details set up?\"; \"where is my loan agreement?\"; \"what happened on my account this week?\"; \"any new notifications?\". Needs the Aurelia MCP server and sign-in."
 license: MIT
 metadata:
   category: "account"
-  version: "0.2.0"
+  version: "0.2.1"
   docs: "https://docs.dhahaby.com/tools#kyc_status_get"
 ---
 # Account
 
 ## Workflow
 1. Identity: `kyc_status_get` returns verified, unverified or expired, with dates. ID numbers are never returned. Verifying with UAE PASS happens in the Aurelia app: give `handoff_to_app` with topic `general`.
-2. Documents: `documents_list` gives each document's type, the reference it belongs to and the date. Files open only in the app.
-3. What happened: `activity_list` (applications, appraisals, custody, payments) and `notifications_list`, newest first, each with the reference it is about.
-4. Overview: `account_context_get` summarises the account; for pieces see `aurelia-my-gold`, for applications `aurelia-status`.
+2. Bank details: `bank_details_status_get` says whether bank details are on file (needed to receive loan or sale money), with the bank name and last 4 digits only. Adding or changing them happens in the Aurelia app; never ask for an IBAN in chat.
+3. Documents: `documents_list` gives each document's type, the reference it belongs to and the date. Files open only in the app.
+4. What happened: `activity_list` (applications, appraisals, custody, payments) and `notifications_list`, newest first, each with the reference it is about.
+5. Overview: `account_context_get` summarises the account; for pieces see `aurelia-my-gold`, for applications `aurelia-status`.
 
 ## Do not
 - Repeat personal data beyond what the user needs; never full ID or account numbers.
