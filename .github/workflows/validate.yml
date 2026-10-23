@@ -1,0 +1,51 @@
+name: validate
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  plugin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check manifests and skills
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, re, sys
+          root = pathlib.Path(".")
+          market = json.loads((root / ".claude-plugin/marketplace.json").read_text())
+          codex = json.loads((root / ".agents/plugins/marketplace.json").read_text())
+          tools = json.loads((root / "tools.json").read_text())
+          known = set(tools["public"]) | set(tools["signedIn"])
+          words = known | set(tools["params"])
+          version = market["metadata"]["version"]
+          errors, seen = [], set()
+          for p in market["plugins"]:
+              pdir = root / p["source"]
+              for manifest in (pdir / ".claude-plugin/plugin.json", pdir / "plugin.json"):
+                  m = json.loads(manifest.read_text())
+                  if m["name"] != p["name"] or m["version"] != p["version"] or m["version"] != version:
+                      errors.append(f"{manifest}: name/version disagree with the marketplace")
+              for f in (".mcp.json", "mcp.json"):
+                  servers = json.loads((pdir / f).read_text())["mcpServers"]
+                  for s in servers.values():
+                      if not s.get("url", "").startswith("https://mcp.dhahaby.com/"):
+                          errors.append(f"{pdir / f}: unexpected server {s}")
+              for skill in sorted((pdir / "skills").glob("*/SKILL.md")):
+                  text = skill.read_text()
+                  m = re.match(r'^---\nname: ([a-z0-9-]+)\ndescription: (.+?)\n', text)
+                  if not m:
+                      errors.append(f"{skill}: missing name/description front matter"); continue
+                  name = m.group(1)
+                  if name != skill.parent.name or not name.startswith("aurelia-"):
+                      errors.append(f"{skill}: bad name {name}")
+                  if name in seen: errors.append(f"{skill}: duplicate {name}")
+                  seen.add(name)
+                  if len(m.group(2)) > 1536: errors.append(f"{skill}: description too long")
+                  for t in set(re.findall(r'`([a-z]+(?:_[a-z]+)+)`', text)):
+                      if t not in words:
+                          errors.append(f"{skill}: unknown tool {t}")
+          if {e["name"] for e in codex["plugins"]} != {p["name"] for p in market["plugins"]}:
+              errors.append("Codex and Claude marketplaces list different plugins")
+          print("\n".join(errors) or f"ok: {len(seen)} skills, {len(known)} tools")
+          sys.exit(1 if errors else 0)
+          PY

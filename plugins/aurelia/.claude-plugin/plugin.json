@@ -1,0 +1,10 @@
+{
+  "name": "aurelia",
+  "version": "0.1.0",
+  "description": "Aurelia by Dhahaby: gold price, borrowing estimates (gold-backed loan vs card), partner jewellers, and your own Dhahaby gold account (read-only, after sign-in).",
+  "author": { "name": "Dhahaby", "url": "https://dhahaby.com" },
+  "homepage": "https://docs.dhahaby.com",
+  "repository": "https://github.com/DHAHABY-COM/aurelia-skills",
+  "license": "MIT",
+  "keywords": ["dhahaby", "aurelia", "gold", "gold-loan", "uae", "mcp"]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "dhahaby",
+  "interface": { "displayName": "Aurelia by Dhahaby" },
+  "plugins": [
+    {
+      "name": "aurelia",
+      "source": { "source": "local", "path": "./plugins/aurelia" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}

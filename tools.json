@@ -1,0 +1,32 @@
+{
+  "public": [
+    "gold_price_get",
+    "borrowing_estimate",
+    "products_compare",
+    "jewellers_list",
+    "handoff_to_app"
+  ],
+  "signedIn": [
+    "account_context_get",
+    "pieces_list",
+    "piece_get",
+    "loan_eligibility_get",
+    "card_eligibility_get",
+    "loan_application_get",
+    "card_application_get",
+    "loan_facilities_list",
+    "card_facility_get",
+    "appraisal_bookings_list",
+    "kyc_status_get",
+    "notifications_list",
+    "activity_list",
+    "documents_list"
+  ],
+  "params": [
+    "weight_g",
+    "self_reported",
+    "photo_valuations",
+    "value_gold",
+    "book_appraisal"
+  ]
+}

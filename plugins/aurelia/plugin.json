@@ -1,0 +1,28 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aurelia",
+  "version": "0.1.0",
+  "description": "Aurelia by Dhahaby: gold price, borrowing estimates (gold-backed loan vs card), partner jewellers, and your own Dhahaby gold account (read-only, after sign-in).",
+  "author": { "name": "Dhahaby", "url": "https://dhahaby.com" },
+  "homepage": "https://docs.dhahaby.com",
+  "repository": "https://github.com/DHAHABY-COM/aurelia-skills",
+  "license": "MIT",
+  "keywords": ["dhahaby", "aurelia", "gold", "gold-loan", "uae", "mcp"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Aurelia by Dhahaby",
+        "shortDescription": "Gold prices, gold-backed borrowing estimates and your Dhahaby gold account",
+        "developerName": "Dhahaby",
+        "category": "Productivity",
+        "capabilities": ["Read"],
+        "websiteURL": "https://dhahaby.com",
+        "defaultPrompt": [
+          "Use Aurelia to check today's gold price in AED.",
+          "Use Aurelia to estimate what I could borrow against 40 g of 21K gold."
+        ],
+        "brandColor": "#EBB136"
+      }
+    }
+  }
+}
