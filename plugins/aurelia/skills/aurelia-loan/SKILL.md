@@ -4,7 +4,7 @@ description: "A gold-backed loan with Dhahaby: which pieces can back it, the pla
 license: MIT
 metadata:
   category: "borrowing"
-  version: "0.2.0"
+  version: "0.3.0"
   docs: "https://docs.dhahaby.com/tools#loan_quote"
 ---
 # Gold-backed loan
@@ -12,9 +12,11 @@ metadata:
 ## Workflow
 1. Eligibility: `loan_eligibility_get` lists the pieces that can back a loan now and the most each can back.
 2. Terms: `loan_quote` with an amount, tenure (3, 6, 9 or 12 months) and repayment type gives the platform's exact figures (fee, monthly payment, total, APR). Quote them as returned; never compute your own.
-3. An application in progress: `loan_application_get`, then `loan_offer_get` with its reference for the offer and its next step (bank details, signing, appraisal fee or handover). A draft always needs bank details and signing first.
+3. An application in progress: `loan_application_get`, then `loan_offer_get` with its reference for the offer and its next step (bank details, signing, appraisal fee or handover). A draft needs bank details, then (for an AI-valued piece already in the vault) the in-vault appraisal fee, then signing.
 4. The active loan: `loan_facilities_list` returns the balance, months paid, next payment and the full repayment schedule; give a reference for a specific loan.
 5. Starting the application, adding bank details, signing with UAE PASS, paying any appraisal fee, showing the handover QR and setting up repayments happen in the Aurelia app: give `handoff_to_app` with topic `borrow`.
+- **Which pieces can back a loan:** `loan_eligibility_get` lists only the eligible pieces with "up to AED X" each, the total, and what comes first (hand it over, or the in-vault appraisal fee). For specific pieces, pass `refs`.
+- **Follow-ups:** remember the list you just showed, in order. "The second one", "the necklace", "that one" and "it" mean an item from it: use its reference without asking again or listing everything again.
 
 ## Do not
 - Quote rates, fees or amounts no tool returned, or promise approval.

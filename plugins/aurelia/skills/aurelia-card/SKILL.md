@@ -4,7 +4,7 @@ description: "Dhahaby's gold-backed card: which pieces can back it and how much 
 license: MIT
 metadata:
   category: "borrowing"
-  version: "0.2.0"
+  version: "0.3.0"
   docs: "https://docs.dhahaby.com/tools#card_facility_get"
 ---
 # Gold-backed card
@@ -14,6 +14,8 @@ metadata:
 2. An application in progress: `card_application_get`, then `card_offer_get` with its DHY-C-… reference for the limit split and the next step (signing, appraisal fee, handover, repayment setup).
 3. The issued card: `card_facility_get` returns the credit limit, available limit, outstanding balance, repayment day and setup, pledged pieces, pending collections and the next step label.
 4. Applying, signing, the handover QR, setting up repayments and adding or releasing pieces happen in the Aurelia app: give `handoff_to_app` with topic `borrow`.
+- **Which pieces can back the card:** `card_eligibility_get` lists only the eligible pieces with what each adds to the limit. For specific pieces, pass `refs`.
+- **Follow-ups:** remember the list you just showed, in order. "The second one", "the necklace", "that one" and "it" mean an item from it: use its reference without asking again or listing everything again.
 
 ## Do not
 - Show or ask for card numbers.

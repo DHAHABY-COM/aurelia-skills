@@ -4,7 +4,7 @@ description: "Selling gold to Dhahaby's partner jeweller: which pieces can be so
 license: MIT
 metadata:
   category: "selling"
-  version: "0.2.0"
+  version: "0.3.0"
   docs: "https://docs.dhahaby.com/tools#sell_eligibility_get"
 ---
 # Selling gold
@@ -15,6 +15,8 @@ metadata:
 3. A completed sale: `sale_completion_get` returns what was sold, the amount paid and the (masked) account it went to.
 4. Locking a price, signing the bill of sale and showing the handover QR happen in the Aurelia app: give `handoff_to_app` with topic `general`.
 5. Selling is final once signed. If the user is unsure, explain borrowing as an alternative (see `aurelia-loan`) without pushing either.
+- **Which pieces can I sell:** `sell_eligibility_get` lists only sellable pieces with the indicative price. For specific pieces, pass `refs`; to compare selling with borrowing for one piece, call it together with `loan_eligibility_get` and the same `refs`.
+- **Follow-ups:** remember the list you just showed, in order. "The second one", "the necklace", "that one" and "it" mean an item from it: use its reference without asking again or listing everything again.
 
 ## Do not
 - Promise a price beyond the platform's figures or the lock period.

@@ -4,14 +4,14 @@
   "owner": { "name": "Dhahaby", "url": "https://dhahaby.com" },
   "metadata": {
     "description": "Aurelia by Dhahaby: gold prices, borrowing estimates against gold, and your own Dhahaby gold account (read-only) for AI agents. Runs on the Aurelia MCP server (https://mcp.dhahaby.com/mcp).",
-    "version": "0.2.2"
+    "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "aurelia",
       "source": "./plugins/aurelia",
       "description": "Connects the Aurelia MCP server and adds skills for today's gold price, what you could borrow against gold (loan vs card), partner jewellers for certified appraisal, and (after sign-in) your gold pieces, appraisal appointments, loan, card, sale and vault status, identity and documents.",
-      "version": "0.2.2",
+      "version": "0.3.0",
       "category": "productivity",
       "keywords": ["dhahaby", "aurelia", "gold", "gold-loan", "uae", "mcp"]
     }

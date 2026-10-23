@@ -4,7 +4,7 @@ description: "The signed-in user's appraisal appointments at Dhahaby partner jew
 license: MIT
 metadata:
   category: "appraisal"
-  version: "0.2.0"
+  version: "0.3.0"
   docs: "https://docs.dhahaby.com/tools#appraisal_bookings_list"
 ---
 # Appraisal appointments
@@ -15,6 +15,8 @@ metadata:
 3. Before the visit: the jeweller's free times are in `appraisal_slots_list`; the address and hours are in `jewellers_list`.
 4. Booking a new appraisal, adding pieces, cancelling or paying the appraisal fee happen in the Aurelia app (approval card or the app's payment screen): give `handoff_to_app` with topic `book_appraisal`.
 5. After the appraisal, certified pieces can back a loan or card: see `aurelia-loan` and `aurelia-card`.
+- **Upcoming only, or at one jeweller:** `appraisal_bookings_list` with `upcoming: true` and/or `jeweller: "Dhakan"`.
+- **Follow-ups:** remember the list you just showed, in order. "The second one", "the necklace", "that one" and "it" mean an item from it: use its reference without asking again or listing everything again.
 
 ## Do not
 - Book, cancel or reschedule yourself, or say an appointment changed unless a tool result shows it.

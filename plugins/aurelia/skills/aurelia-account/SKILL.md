@@ -4,7 +4,7 @@ description: "The signed-in user's Dhahaby account: identity verification (UAE P
 license: MIT
 metadata:
   category: "account"
-  version: "0.2.1"
+  version: "0.3.0"
   docs: "https://docs.dhahaby.com/tools#kyc_status_get"
 ---
 # Account
@@ -15,6 +15,8 @@ metadata:
 3. Documents: `documents_list` gives each document's type, the reference it belongs to and the date. Files open only in the app.
 4. What happened: `activity_list` (applications, appraisals, custody, payments) and `notifications_list`, newest first, each with the reference it is about.
 5. Overview: `account_context_get` summarises the account; for pieces see `aurelia-my-gold`, for applications `aurelia-status`.
+- **One document or topic:** `documents_list`, `activity_list` and `notifications_list` take `query` (words in the title) and `ref` (the reference it is about), e.g. the loan agreement for DHY-L-….
+- **Follow-ups:** remember the list you just showed, in order. "The second one", "the necklace", "that one" and "it" mean an item from it: use its reference without asking again or listing everything again.
 
 ## Do not
 - Repeat personal data beyond what the user needs; never full ID or account numbers.
