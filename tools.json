@@ -4,6 +4,7 @@
     "borrowing_estimate",
     "products_compare",
     "jewellers_list",
+    "appraisal_slots_list",
     "handoff_to_app"
   ],
   "signedIn": [
@@ -27,6 +28,7 @@
     "self_reported",
     "photo_valuations",
     "value_gold",
-    "book_appraisal"
+    "book_appraisal",
+    "jeweller_id"
   ]
 }
