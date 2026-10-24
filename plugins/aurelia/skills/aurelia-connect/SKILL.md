@@ -18,7 +18,7 @@ Aurelia is Dhahaby's gold assistant. It has two MCP endpoints:
 
 ## Workflow
 1. Check what is already connected: if `pieces_list` is available, the user is signed in. If only `gold_price_get` and friends are available, they are on the public tools.
-2. To sign in with this plugin, the client opens Dhahaby's sign-in page when the `aurelia` server is first used (phone, email or Google). The user allows reading and, optionally, changes (each one still needs their yes in the chat). An older read-only connection gets `write_not_allowed` for changes: disconnect Aurelia and connect again, allowing changes.
+2. To sign in with this plugin, the client opens Dhahaby's sign-in page when the `aurelia` server is first used (phone, email or Google). The user allows reading and, optionally, changes (each one still needs their yes in the chat). An older read-only connection gets an error saying changes are not allowed: disconnect Aurelia and connect again, allowing changes.
 3. Clients without remote OAuth: run `npx -y @dhahaby-com/aurelia-mcp` as a stdio server, and sign in once with `npx @dhahaby-com/aurelia-cli login` (a browser page with a short code).
 4. Terminal users can use the CLI directly: `aurelia price`, `aurelia estimate --karat 21 --grams 40`, `aurelia pieces`.
 5. To disconnect: `aurelia logout` revokes the CLI's access; for MCP clients, remove the connection in the client.
