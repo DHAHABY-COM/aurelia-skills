@@ -1,7 +1,7 @@
 {
   "name": "aurelia",
-  "version": "0.3.1",
-  "description": "Aurelia by Dhahaby: gold price, borrowing estimates (gold-backed loan vs card), partner jewellers, and your own Dhahaby gold account: pieces, appointments, loan, card, sale, vault and documents (read-only, after sign-in).",
+  "version": "0.4.0",
+  "description": "Aurelia by Dhahaby: gold price, photo valuation, borrowing against gold (gold-backed loan or card), certified appraisal booking, selling and vault storage, and your own Dhahaby gold account. Changes need your yes; signing, payments and bank details happen on Dhahaby's secure page.",
   "author": { "name": "Dhahaby", "url": "https://dhahaby.com" },
   "homepage": "https://docs.dhahaby.com",
   "repository": "https://github.com/DHAHABY-COM/aurelia-skills",

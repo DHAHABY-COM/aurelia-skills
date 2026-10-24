@@ -7,7 +7,8 @@ Aurelia is Dhahaby's gold assistant for the UAE. This repo connects any AI agent
 - today's gold price in AED;
 - what you could borrow against your gold, with a gold-backed loan or a gold-backed card;
 - partner jewellers for a certified appraisal;
-- after you sign in, your own Dhahaby account (read-only): gold pieces, appraisal appointments, loan and repayment schedule, gold card, sales, vault bookings, identity status, documents and activity.
+- after you sign in, your own Dhahaby account: gold pieces, appraisal appointments, loan and repayment schedule, gold card, sales, vault bookings, identity status, documents and activity;
+- and the whole journey: value a photo, save it to your gold, book or move an appraisal, apply for a loan or card, start a sale. Each change is a preview first and runs only after you say yes.
 
 ## Install
 
@@ -56,7 +57,8 @@ npx @dhahaby-com/aurelia-cli appointments    # also: card, loan, vault, sale DHY
 
 ## Safety
 
-- **Read-only.** Through MCP, Aurelia cannot apply, sign, pay, book or move gold. Those steps happen only in the Aurelia app (aurelia.dhahaby.com), and the agent hands over a link.
+- **Your yes for every change.** A change is previewed first and runs only after you confirm it, at most 10 a day from an assistant.
+- **Never in the chat:** signing with UAE PASS, identity checks, bank details, payments and handing over gold open on Dhahaby's own secure page. Agents never see passwords, codes, IBANs or ID numbers.
 - **Your own sign-in.** You sign in on Dhahaby's page with phone, email or Google. Agents never see your password or codes. Access tokens last 15 minutes, are bound to the MCP server and can be revoked at any time.
 - **Indicative figures.** Values are indicative. Final amounts are set by a licensed lender after a certified appraisal. Aurelia does not give financial advice.
 
