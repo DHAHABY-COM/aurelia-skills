@@ -4,7 +4,7 @@ description: "The signed-in user's Dhahaby account: identity verification (UAE P
 license: MIT
 metadata:
   category: "account"
-  version: "0.3.0"
+  version: "0.3.1"
   docs: "https://docs.dhahaby.com/tools#kyc_status_get"
 ---
 # Account
@@ -17,6 +17,7 @@ metadata:
 5. Overview: `account_context_get` summarises the account; for pieces see `aurelia-my-gold`, for applications `aurelia-status`.
 - **One document or topic:** `documents_list`, `activity_list` and `notifications_list` take `query` (words in the title) and `ref` (the reference it is about), e.g. the loan agreement for DHY-L-….
 - **Follow-ups:** remember the list you just showed, in order. "The second one", "the necklace", "that one" and "it" mean an item from it: use its reference without asking again or listing everything again.
+- **Activity is history.** `activity_list` and `notifications_list` show what happened, not where things stand (an application listed there may since have been cancelled). Read the application, facility or booking before saying its status.
 
 ## Do not
 - Repeat personal data beyond what the user needs; never full ID or account numbers.
